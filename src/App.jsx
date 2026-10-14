@@ -195,6 +195,15 @@ function App() {
 
               <a href="#about" className="secondary-btn">
                 More About Me ↓
+                
+                <a
+               href="/projects/CV_GALIH.pdf"
+               download="CV_GALIH.pdf"
+               className="cv-btn"
+               >
+               ↓ Download CV
+              </a>
+
               </a>
             </div>
 

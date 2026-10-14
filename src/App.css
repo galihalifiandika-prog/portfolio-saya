@@ -1022,3 +1022,38 @@ h1, h2, h3 {
     transform: none;
   }
 }
+
+/* TOMBOL DOWNLOAD CV */
+
+.cv-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 24px;
+  background: #ffe333;
+  color: #181818;
+  border: 2px solid #181818;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  box-shadow: 4px 4px 0 #181818;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+
+.cv-btn:hover {
+  background: #f8cf1d;
+  transform: translateY(-5px);
+  box-shadow: 6px 9px 0 #181818;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cv-btn,
+  .cv-btn:hover {
+    transform: none;
+    transition: none;
+  }
+}
