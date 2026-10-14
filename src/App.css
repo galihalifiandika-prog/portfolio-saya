@@ -1203,3 +1203,158 @@ h1, h2, h3 {
     transform: none;
   }
 }
+
+/* PERBAIKAN TOMBOL HOME DI HP */
+
+@media (max-width: 600px) {
+
+  .hero-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+  }
+
+  .hero-buttons > a {
+    width: 100%;
+    min-height: 55px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+}
+
+/* MERAPIKAN TOMBOL HOME DI HP */
+
+@media (max-width: 600px) {
+
+  .hero-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+    width: 100%;
+  }
+
+  .hero-buttons > a {
+    width: 100%;
+    min-height: 54px;
+    margin: 0;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: clamp(38px, 9vw, 52px);
+    line-height: 1.12;
+    letter-spacing: -2px;
+  }
+
+  .headline-small {
+    font-size: 0.55em;
+    overflow-wrap: anywhere;
+  }
+}
+/* TAMPILAN TOMBOL KHUSUS HP */
+
+@media (max-width: 600px) {
+  .hero-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+  }
+
+  .hero-buttons > a {
+    width: 100%;
+    margin: 0;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+/* RESPONSIVE TYPING ANIMATION */
+
+@media (max-width: 600px) {
+  .headline-small {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    min-height: 2.5em;
+    font-size: clamp(18px, 5vw, 25px);
+    line-height: 1.4;
+    letter-spacing: -0.5px;
+    overflow-wrap: anywhere;
+    white-space: normal;
+  }
+
+  .typing-cursor {
+    display: inline;
+  }
+}
+
+/* KOLASE RESPONSIVE KHUSUS HP */
+
+@media (max-width: 600px) {
+
+  .collage {
+    width: 100%;
+    height: 370px;
+    transform: none;
+    margin: 25px auto 0;
+    position: relative;
+  }
+
+  .collage-circle {
+    width: 280px;
+    height: 280px;
+    max-width: 85%;
+    top: 45px;
+  }
+
+  .paper-megaphone {
+    width: 150px;
+    height: 145px;
+    top: 50px;
+    left: 0;
+  }
+
+  .paper-chat {
+    width: 140px;
+    height: 125px;
+    top: 5px;
+    right: 0;
+  }
+
+  .paper-bulb {
+    width: 125px;
+    height: 145px;
+    bottom: 20px;
+    left: 5px;
+  }
+
+  .starburst {
+    width: 165px;
+    height: 165px;
+    top: 140px;
+    right: 0;
+  }
+
+  .starburst span {
+    font-size: 25px;
+  }
+
+  .sticker-note {
+    font-size: 12px;
+    padding: 10px;
+    right: 10px;
+    bottom: 5px;
+  }
+
+  .decor-star {
+    font-size: 27px;
+  }
+}

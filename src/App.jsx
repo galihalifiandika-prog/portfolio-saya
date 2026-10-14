@@ -188,24 +188,27 @@ function App() {
 
             </p>
 
-            <div className="hero-buttons">
-              <a href="#projects" className="primary-btn">
-                Explore My Work <span>↗</span>
-              </a>
+           
+<div className="hero-buttons">
 
-              <a href="#about" className="secondary-btn">
-                More About Me ↓
-                
-                <a
-               href="/projects/CV_GALIH.pdf"
-               download="CV_GALIH.pdf"
-               className="cv-btn"
-               >
-               ↓ Download CV
-              </a>
+  <a href="#projects" className="primary-btn">
+    Explore My Work <span>↗</span>
+  </a>
 
-              </a>
-            </div>
+  <a href="#about" className="secondary-btn">
+    More About Me ↓
+  </a>
+
+  <a
+    href="/projects/CV_GALIH.pdf"
+    download="CV_GALIH.pdf"
+    className="cv-btn"
+  >
+    ↓ Download CV
+  </a>
+
+</div>
+
 
             <div className="hero-bottom">
               <span>✳ CREATE SOMETHING DIFFERENT</span>
