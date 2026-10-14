@@ -58,6 +58,26 @@ const projects = [
 
 function App() {
   
+const [showBackToTop, setShowBackToTop] = useState(false);
+
+useEffect(() => {
+  const handleScroll = () => {
+    setShowBackToTop(window.scrollY > 350);
+  };
+
+  handleScroll();
+
+  window.addEventListener("scroll", handleScroll, {
+    passive: true,
+  });
+
+  return () => {
+    window.removeEventListener("scroll", handleScroll);
+  };
+}, []);
+
+
+  
   const [typingText, setTypingText] = useState('')
 
   useEffect(() => {
@@ -360,6 +380,79 @@ function App() {
             </div>
           </div>
         </section>
+        
+{/* EDUCATION JOURNEY */}
+<section className="education container" id="education">
+
+  <div className="section-label">
+    02 / MY EDUCATION
+  </div>
+
+  <h2 className="education-title reveal">
+    Education <span>Journey.</span> ✳
+  </h2>
+
+  <p className="education-intro reveal">
+    Perjalanan pendidikan dan proses saya
+    dalam mengembangkan pengetahuan serta
+    keterampilan di bidang teknologi.
+  </p>
+
+  <div className="education-timeline">
+
+    {/* PENDIDIKAN KULIAH */}
+    <div className="education-item reveal">
+      <div className="education-dot"></div>
+
+      <div className="education-card">
+        <span className="education-year">
+        2024 – Sekarang
+        </span>
+
+        <h3>S1 Teknik Informatika</h3>
+        
+<p className="education-semester">
+  ✦ Semester 5
+</p>
+
+
+        <p>UNIVERSITAS BINA INSAN</p>
+
+       
+<p className="education-desc">
+  Mahasiswa Teknik Informatika yang mempelajari
+  pengembangan website, pemrograman, database,
+  dan UI/UX Design. Memiliki ketertarikan pada
+  pengembangan perangkat lunak serta teknologi
+  digital yang kreatif dan inovatif.
+</p>
+
+      </div>
+    </div>
+
+    {/* PENDIDIKAN SMK */}
+    <div className="education-item reveal">
+      <div className="education-dot"></div>
+
+      <div className="education-card">
+       <span className="education-year">
+       2020 – 2023
+      </span>
+
+        <h3> SMK</h3>
+
+        <p>SMK PERTANIAN NEGERI 2 TUGUMULYO</p>
+
+        <p className="education-desc">
+          Pendidikan menengah sebelum
+          melanjutkan studi di bidang
+          Teknik Informatika.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
 
         {/* PROJECTS */}
         <section className="projects" id="projects">
@@ -402,7 +495,12 @@ function App() {
                     <span className="project-number">
                       {project.nomor}
                     </span>
-                    
+                  
+{/* STIKER KREATIF */}
+<span className="project-sticker">
+  ✳ CREATIVE WORK
+</span>
+  
                  {project.nomor === "01" ? (
              <img
                 src="/projects/portfolio.png"
@@ -487,6 +585,97 @@ function App() {
             ))}
           </div>
         </section>
+
+{/* BEYOND CODING */}
+<section className="interests-section container" id="interests">
+
+  <div className="section-label">
+    05 / MY CREATIVE SIDE
+  </div>
+
+  <h2 className="interests-title reveal">
+    Beyond <span>Coding.</span> ✳
+  </h2>
+
+  <p className="interests-description reveal">
+    Di luar dunia pemrograman, saya juga menyukai
+    musik dan video game. Keduanya menjadi bagian
+    dari kreativitas, inspirasi, dan cara saya
+    menikmati waktu luang.
+  </p>
+
+  <div className="interests-collage reveal">
+
+    <div className="interest-card game-card">
+      <img src="/interests/game.jpg" alt="Game Controller" />
+      <span>GAME LOVER 🎮</span>
+    </div>
+
+    <div className="interest-card headphone-card">
+      <img src="/interests/headphone.jpg" alt="Headphone" />
+      <span>MUSIC ADDICT 🎧</span>
+    </div>
+
+    <div className="interest-card disc-card">
+      <img src="/interests/disc.jpg" alt="Music Disc" />
+      <span>GOOD VIBES ONLY 💿</span>
+     </div> {/* Penutup kartu CD */}
+
+</div> {/* Penutup interests-collage */} 
+{/* MINI MUSIC PLAYER */}
+<div className="music-player">
+  <div className="music-player-info">
+    <span>♫ NOW PLAYING</span>
+    <h3>My Music Corner 🎧</h3>
+
+<p>🎵 Langit Tak Seharusnya Biru — The Jansen</p>
+  </div>
+
+{/* PIRINGAN CD MUSIC PLAYER */}
+<div className="music-disc" aria-hidden="true">
+  <div className="music-disc-center"></div>
+</div>
+
+
+<audio
+  controls
+  preload="metadata"
+  src="/music/lagu1.mp3"
+  onPlay={(e) => {
+    e.currentTarget.closest(".music-player")?.classList.add("is-playing");
+  }}
+  onPause={(e) => {
+    e.currentTarget.closest(".music-player")?.classList.remove("is-playing");
+  }}
+  onEnded={(e) => {
+    e.currentTarget.closest(".music-player")?.classList.remove("is-playing");
+  }}
+>
+
+    Browser kamu tidak mendukung audio.
+  </audio>
+</div>
+
+</section>
+
+
+{/* BACK TO TOP BUTTON */}
+{showBackToTop && (
+  <button
+    className="back-to-top"
+    type="button"
+    aria-label="Kembali ke atas"
+    onClick={() => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }}
+  >
+    ↑
+  </button>
+)}
+
 
         {/* CONTACT */}
         <section className="contact" id="contact">

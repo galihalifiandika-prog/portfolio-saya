@@ -1358,3 +1358,977 @@ h1, h2, h3 {
     font-size: 27px;
   }
 }
+
+/* =========================
+   BEYOND CODING - GAME & MUSIC
+========================= */
+
+.interests-section {
+  padding-top: 110px;
+  padding-bottom: 120px;
+}
+
+.interests-title {
+  font-size: clamp(42px, 6vw, 75px);
+  letter-spacing: -3px;
+  line-height: 1.1;
+  margin-bottom: 25px;
+}
+
+.interests-title span {
+  color: #7251dd;
+}
+
+.interests-description {
+  max-width: 650px;
+  color: #666;
+  font-size: 17px;
+  line-height: 1.9;
+}
+
+/* KOLEASE GAMBAR */
+
+.interests-collage {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: center;
+  gap: 35px;
+  margin-top: 70px;
+}
+
+.interest-card {
+  min-width: 0;
+  background: white;
+  border: 3px solid #181818;
+  border-radius: 16px;
+  padding: 22px;
+  text-align: center;
+  box-shadow: 8px 8px 0 #181818;
+  transition: transform 0.3s ease;
+}
+
+.interest-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.interest-card span {
+  display: inline-block;
+  background: #ffe333;
+  color: #181818;
+  padding: 10px 15px;
+  font-weight: 700;
+  font-size: 13px;
+  border-radius: 30px;
+}
+
+/* GAME CONTROLLER */
+
+.game-card {
+  background: #e9e2ff;
+  animation: gameFloat 4s ease-in-out infinite;
+}
+
+/* HEADPHONE */
+
+.headphone-card {
+  background: #fff1b6;
+  animation: headphoneFloat 5s ease-in-out infinite;
+}
+
+/* MUSIC DISC */
+
+.disc-card {
+  background: #f6d8eb;
+  animation: discFloat 4.5s ease-in-out infinite;
+}
+
+/* CD BERPUTAR */
+
+.disc-card img {
+  animation: discSpin 10s linear infinite;
+}
+
+/* ANIMASI MELAYANG */
+
+@keyframes gameFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(-4deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(-1deg);
+  }
+}
+
+@keyframes headphoneFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(4deg);
+  }
+  50% {
+    transform: translateY(-18px) rotate(1deg);
+  }
+}
+
+@keyframes discFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(-3deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(3deg);
+  }
+}
+
+@keyframes discSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* EFEK SAAT MOUSE DIARAHKAN */
+
+.interest-card:hover {
+  animation: none;
+  transform: translateY(-10px) rotate(0deg);
+  box-shadow: 12px 14px 0 #7251dd;
+}
+
+/* RESPONSIVE HP */
+
+@media (max-width: 600px) {
+  .interests-section {
+    padding-top: 70px;
+    padding-bottom: 85px;
+  }
+
+  .interests-title {
+    font-size: 42px;
+    letter-spacing: -2px;
+  }
+
+  .interests-description {
+    font-size: 15px;
+  }
+
+  .interests-collage {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    margin-top: 45px;
+  }
+
+  .interest-card {
+    max-width: 350px;
+    width: 90%;
+    margin: auto;
+  }
+
+  .interest-card img {
+    height: 190px;
+  }
+}
+
+/* AKSESIBILITAS */
+
+@media (prefers-reduced-motion: reduce) {
+  .interest-card,
+  .disc-card img {
+    animation: none;
+  }
+
+  .interest-card:hover {
+    transform: none;
+  }
+}
+
+/* MEMBUAT GAMBAR MENYATU DENGAN KOLASE */
+
+.interest-card img {
+  mix-blend-mode: multiply;
+  background: transparent;
+  object-fit: contain;
+}
+
+/* ANIMASI GAMBAR GAME DAN MUSIK */
+
+.interest-card img {
+  transition: transform 0.4s ease;
+}
+
+/* GAME CONTROLLER */
+.game-card:hover img {
+  transform: scale(1.15) rotate(-8deg);
+}
+
+/* HEADPHONE */
+.headphone-card:hover img {
+  transform: scale(1.12) rotate(8deg);
+}
+
+/* CD MUSIK */
+.disc-card:hover img {
+  animation: discSpin 2s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .interest-card img,
+  .disc-card:hover img {
+    animation: none;
+    transition: none;
+  }
+
+  .game-card:hover img,
+  .headphone-card:hover img {
+    transform: none;
+  }
+}
+
+/* EDUCATION JOURNEY */
+
+.education {
+  padding: 100px 0;
+}
+
+.education-title {
+  font-size: clamp(40px, 6vw, 72px);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -2px;
+  margin: 20px 0;
+  color: #181818;
+}
+
+.education-title span {
+  color: #7251dd;
+}
+
+.education-intro {
+  max-width: 650px;
+  color: #666;
+  font-size: 17px;
+  line-height: 1.8;
+  margin-bottom: 55px;
+}
+
+/* GARIS TIMELINE */
+
+.education-timeline {
+  position: relative;
+  max-width: 850px;
+  padding-left: 55px;
+}
+
+.education-timeline::before {
+  content: "";
+  position: absolute;
+  left: 18px;
+  top: 20px;
+  bottom: 20px;
+  width: 3px;
+  background: #7251dd;
+}
+
+/* KARTU PENDIDIKAN */
+
+.education-item {
+  position: relative;
+  margin-bottom: 35px;
+}
+
+.education-dot {
+  position: absolute;
+  left: -45px;
+  top: 35px;
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  background: #ffe333;
+  border: 3px solid #181818;
+  z-index: 2;
+}
+
+.education-card {
+  background: #fff;
+  padding: 30px;
+  border: 2px solid #181818;
+  border-radius: 18px;
+  box-shadow: 7px 7px 0 #7251dd;
+  transition: transform 0.3s ease,
+              box-shadow 0.3s ease;
+}
+
+.education-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 10px 12px 0 #ffe333;
+}
+
+.education-year {
+  display: inline-block;
+  background: #ffe333;
+  padding: 8px 15px;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.education-card h3 {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.education-card p {
+  color: #555;
+  line-height: 1.7;
+}
+
+.education-desc {
+  margin-top: 12px;
+}
+
+/* RESPONSIVE HP */
+
+@media (max-width: 600px) {
+  .education {
+    padding: 70px 0;
+  }
+
+  .education-title {
+    font-size: 40px;
+  }
+
+  .education-intro {
+    font-size: 15px;
+  }
+
+  .education-timeline {
+    padding-left: 35px;
+  }
+
+  .education-timeline::before {
+    left: 10px;
+  }
+
+  .education-dot {
+    left: -33px;
+  }
+
+  .education-card {
+    padding: 20px;
+  }
+
+  .education-card h3 {
+    font-size: 21px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .education-card,
+  .education-card:hover {
+    transition: none;
+    transform: none;
+  }
+}
+
+/* BADGE SEMESTER EDUCATION */
+
+.education-semester {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  margin-top: 12px;
+  padding: 9px 18px;
+  background: #e9e2ff;
+  color: #7251dd !important;
+  border: 2px solid #7251dd;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 700;
+  transition: transform 0.3s ease,
+              background 0.3s ease;
+}
+
+.education-semester:hover {
+  background: #ffe333;
+  transform: rotate(-3deg) scale(1.05);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .education-semester {
+    transition: none;
+  }
+
+  .education-semester:hover {
+    transform: none;
+  }
+}
+
+
+/* DARK GREEN MUSIC PLAYER */
+
+.music-player {
+  box-sizing: border-box;
+  width: min(100%, 650px);
+  margin: 65px auto 30px;
+  padding: 35px 30px;
+  background: #123b2a;
+  border: 3px solid #0b2419;
+  border-radius: 24px;
+  box-shadow: 10px 10px 0 #8eae91;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.music-player:hover {
+  transform: translateY(-5px);
+}
+
+.music-player-info span {
+  display: inline-block;
+  background: #d3e7c7;
+  color: #123b2a;
+  padding: 8px 18px;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.music-player-info h3 {
+  font-size: 28px;
+  color: #ffffff;
+  margin: 20px 0 10px;
+}
+
+.music-player-info p {
+  color: #d4e5d7;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+.music-player audio {
+  display: block;
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  border-radius: 40px;
+}
+
+@media (max-width: 600px) {
+  .music-player {
+    padding: 25px 18px;
+    margin: 45px auto;
+  }
+
+  .music-player-info h3 {
+    font-size: 24px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .music-player {
+    transition: none;
+  }
+
+  .music-player:hover {
+    transform: none;
+  }
+}
+
+/* PIRINGAN CD MUSIC PLAYER */
+
+.music-disc {
+  width: 150px;
+  height: 150px;
+  margin: 25px auto;
+  border-radius: 50%;
+  border: 4px solid #a3c0b5;
+
+  background:
+    repeating-radial-gradient(
+      circle,
+      transparent 0px,
+      transparent 8px,
+      rgba(0, 0, 0, 0.12) 9px,
+      transparent 11px
+    ),
+    conic-gradient(
+      #c9d5d0,
+      #ffffff,
+      #91b7ab,
+      #e0d4f7,
+      #ffffff,
+      #9bbcae,
+      #c9d5d0
+    );
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.25),
+    inset 0 0 15px rgba(255, 255, 255, 0.6);
+
+  animation: musicDiscRotate 4s linear infinite;
+  animation-play-state: paused;
+}
+
+/* LUBANG TENGAH CD */
+
+.music-disc-center {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #123b2a;
+  border: 9px solid #d9dfd7;
+}
+
+/* ANIMASI PUTAR */
+
+@keyframes musicDiscRotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* BERPUTAR KETIKA MUSIK DIMAINKAN */
+
+.music-player.is-playing .music-disc {
+  animation-play-state: running;
+}
+
+/* AKSESIBILITAS */
+
+@media (prefers-reduced-motion: reduce) {
+  .music-disc {
+    animation: none;
+  }
+}
+
+/* MUSIC EQUALIZER */
+
+.music-equalizer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  height: 45px;
+  margin: 15px auto 25px;
+}
+
+.music-equalizer span {
+  display: block;
+  width: 7px;
+  height: 10px;
+  background: #a8d5ba;
+  border-radius: 8px;
+  animation: equalizerMove 0.8s ease-in-out infinite alternate;
+  animation-play-state: paused;
+}
+
+/* SETIAP BATANG BERGERAK BERBEDA */
+
+.music-equalizer span:nth-child(1) {
+  animation-delay: -0.2s;
+}
+
+.music-equalizer span:nth-child(2) {
+  animation-delay: -0.6s;
+}
+
+.music-equalizer span:nth-child(3) {
+  animation-delay: -0.4s;
+}
+
+.music-equalizer span:nth-child(4) {
+  animation-delay: -0.7s;
+}
+
+.music-equalizer span:nth-child(5) {
+  animation-delay: -0.3s;
+}
+
+/* ANIMASI NAIK TURUN */
+
+@keyframes equalizerMove {
+  from {
+    height: 8px;
+  }
+
+  to {
+    height: 35px;
+  }
+}
+
+/* BERGERAK SAAT MUSIK DIMAINKAN */
+
+.music-player.is-playing .music-equalizer span {
+  animation-play-state: running;
+}
+
+/* AKSESIBILITAS */
+
+@media (prefers-reduced-motion: reduce) {
+  .music-equalizer span {
+    animation: none;
+  }
+}
+
+/* LAMPU INDIKATOR MUSIC PLAYER */
+
+.music-player-info span {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.music-player-info span::before {
+  content: "";
+  width: 9px;
+  height: 9px;
+  background: #82938a;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* LAMPU MENYALA SAAT MUSIK DIPUTAR */
+
+.music-player.is-playing .music-player-info span::before {
+  background: #48ff91;
+  box-shadow: 0 0 12px #48ff91;
+  animation: musicLight 1s ease-in-out infinite alternate;
+}
+
+@keyframes musicLight {
+  from {
+    opacity: 0.5;
+    box-shadow: 0 0 4px #48ff91;
+  }
+
+  to {
+    opacity: 1;
+    box-shadow: 0 0 16px #48ff91;
+  }
+}
+
+/* HENTIKAN KEDIPAN JIKA ANIMASI DIKURANGI */
+
+@media (prefers-reduced-motion: reduce) {
+  .music-player.is-playing .music-player-info span::before {
+    animation: none;
+  }
+}
+
+/* BACK TO TOP BUTTON */
+
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 55px;
+  height: 55px;
+
+  background: #123b2a;
+  color: white;
+
+  border: 2px solid #0b2419;
+  border-radius: 50%;
+  box-shadow: 5px 5px 0 #8eae91;
+
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: transform 0.3s ease,
+              background 0.3s ease;
+}
+
+.back-to-top:hover {
+  background: #1d6044;
+  transform: translateY(-6px);
+}
+
+.back-to-top:focus-visible {
+  outline: 3px solid #8eae91;
+  outline-offset: 4px;
+}
+
+@media (max-width: 600px) {
+  .back-to-top {
+    width: 48px;
+    height: 48px;
+    bottom: 20px;
+    right: 20px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .back-to-top {
+    transition: none;
+  }
+
+  .back-to-top:hover {
+    transform: none;
+  }
+}
+
+/* CREATIVE TITLE HIGHLIGHT */
+
+.education-title span,
+.interests-title span {
+  position: relative;
+  display: inline-block;
+  isolation: isolate;
+}
+
+.education-title span::after,
+.interests-title span::after {
+  content: "";
+  position: absolute;
+  left: -3%;
+  bottom: 5%;
+  width: 106%;
+  height: 30%;
+  background: #ffe333;
+  border-radius: 4px;
+  transform: rotate(-2deg);
+  z-index: -1;
+  transition: transform 0.3s ease;
+}
+
+.education-title span:hover::after,
+.interests-title span:hover::after {
+  transform: rotate(2deg) scaleY(1.25);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .education-title span::after,
+  .interests-title span::after {
+    transition: none;
+  }
+}
+
+/* PROJECT CREATIVE STICKER */
+
+.project-art {
+  position: relative;
+}
+
+.project-sticker {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  z-index: 5;
+
+  display: inline-block;
+  padding: 9px 14px;
+
+  background: #ffe333;
+  color: #181818;
+
+  border: 2px solid #181818;
+  border-radius: 8px;
+  box-shadow: 4px 4px 0 #181818;
+
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+
+  transform: rotate(-8deg);
+  transition: transform 0.3s ease;
+  pointer-events: none;
+}
+
+/* STIKER BERGERAK SAAT KARTU DISENTUH */
+
+.project-card:hover .project-sticker {
+  transform: rotate(5deg) scale(1.08);
+}
+
+/* TAMPILAN HP */
+
+@media (max-width: 600px) {
+  .project-sticker {
+    right: 10px;
+    bottom: 10px;
+    padding: 7px 10px;
+    font-size: 9px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-sticker {
+    transition: none;
+  }
+
+  .project-card:hover .project-sticker {
+    transform: none;
+  }
+}
+
+/* PROJECT CARD POLAROID STYLE */
+
+.project-card {
+  box-sizing: border-box;
+  background: #ffffff;
+  border: 2px solid #181818;
+  border-radius: 20px;
+  padding: 12px 12px 25px;
+  box-shadow: 9px 9px 0 #7251dd;
+}
+
+/* BINGKAI GAMBAR PROYEK */
+
+.project-art {
+  border-radius: 12px;
+}
+
+/* EFEK BAYANGAN SAAT HOVER */
+
+.project-card:hover {
+  box-shadow: 12px 14px 0 #ffe333;
+}
+
+/* RESPONSIVE HP */
+
+@media (max-width: 600px) {
+  .project-card {
+    padding: 10px 10px 20px;
+    box-shadow: 6px 6px 0 #7251dd;
+  }
+}
+
+/* PROJECT DECORATIVE STAR */
+
+.project-art::after {
+  content: "✦ MADE WITH CREATIVITY";
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 6;
+
+  background: #ffffff;
+  color: #7251dd;
+  padding: 9px 13px;
+
+  border: 2px solid #181818;
+  border-radius: 8px;
+  box-shadow: 3px 3px 0 #181818;
+
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+
+  transform: rotate(7deg);
+  pointer-events: none;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-art::after {
+  transform: rotate(-5deg) scale(1.05);
+}
+
+@media (max-width: 600px) {
+  .project-art::after {
+    top: 10px;
+    right: 10px;
+    padding: 6px 8px;
+    font-size: 8px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-art::after {
+    transition: none;
+  }
+}
+
+/* ANIMASI JUDUL SELECTED WORKS */
+
+.projects .section-heading h2 span {
+  position: relative;
+  display: inline-block;
+  isolation: isolate;
+}
+
+.projects .section-heading h2 span::after {
+  content: "";
+  position: absolute;
+  bottom: 3px;
+  left: 0;
+  width: 100%;
+  height: 15px;
+  background: #ffe333;
+  z-index: -1;
+
+  transform: scaleX(0.15) rotate(-2deg);
+  transform-origin: left;
+
+  transition: transform 0.5s ease;
+}
+
+.projects .section-heading:hover h2 span::after {
+  transform: scaleX(1) rotate(-2deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .projects .section-heading h2 span::after {
+    transition: none;
+  }
+}
+
+/* ANIMASI SKILLS & TECHNOLOGIES */
+
+.skill-pill {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+
+.skill-pill:hover {
+  background: #e6f2e8;
+  transform: translateY(-6px) scale(1.04);
+  box-shadow: 5px 5px 0 #123b2a;
+}
+
+/* ANIMASI IKON TEKNOLOGI */
+
+.skill-icon svg {
+  transition:
+    transform 0.3s ease,
+    filter 0.3s ease;
+}
+
+.skill-pill:hover .skill-icon svg {
+  transform: scale(1.25) rotate(-8deg);
+  filter: drop-shadow(0 0 6px rgba(114, 81, 221, 0.5));
+}
+
+/* AKSESIBILITAS */
+
+@media (prefers-reduced-motion: reduce) {
+  .skill-pill,
+  .skill-icon svg {
+    transition: none;
+  }
+
+  .skill-pill:hover,
+  .skill-pill:hover .skill-icon svg {
+    transform: none;
+  }
+}
