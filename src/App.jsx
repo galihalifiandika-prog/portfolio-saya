@@ -501,12 +501,16 @@ function App() {
               Yuk, buat sesuatu yang keren bersama!
             </p>
 
-            <a
-              href={`mailto:${email}`}
-              className="contact-button"
-            >
-              <FaEnvelope /> Say Hello ↗
-            </a>
+           
+<a
+  href={`https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(email)}`}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="contact-button"
+>
+  <FaEnvelope /> Say Hello ↗
+</a>
+
             
              <a
                href="https://github.com/galihalifiandika-prog"
