@@ -415,11 +415,28 @@ function App() {
                     </span>
                     <h3>{project.judul}</h3>
                     <p>{project.deskripsi}</p>
-                    {project.nomor === "01" && (
-                    <a href="#home" className="project-link">
-                   View Project ↗
+                    
+                 { project.nomor === "01" && (
+               <div className="project-actions">
+               <a
+               href="https://galih-portfolio-navy.vercel.app"
+               className="project-link"
+               target="_blank"
+              rel="noopener noreferrer"
+              >
+              View Project ↗
               </a>
-            )}
+
+            <a
+               href="https://github.com/galihalifiandika-prog/portfolio-saya"
+                className="project-link"
+                 target="_blank"
+                  rel="noopener noreferrer"
+            >
+             Source Code ↗
+              </a>
+           </div>
+           )}
 
                   </div>
                 </article>
