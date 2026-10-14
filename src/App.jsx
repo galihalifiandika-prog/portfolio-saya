@@ -1,4 +1,4 @@
-
+import { FaEnvelope, FaGithub, FaWhatsapp } from 'react-icons/fa'
 const skillIcons = {
   "HTML5": <SiHtml5 color="#E34F26" />,
   "CSS3": <SiCss color="#1572B6" />,
@@ -505,8 +505,28 @@ function App() {
               href={`mailto:${email}`}
               className="contact-button"
             >
-              Say Hello ↗
+              <FaEnvelope /> Say Hello ↗
             </a>
+            
+             <a
+               href="https://github.com/galihalifiandika-prog"
+              target="_blank"
+               rel="noopener noreferrer"
+               className="contact-button github-btn"
+            >
+          <FaGithub /> GitHub ↗
+            </a>
+            
+             <a
+            href="https://wa.me/62895604323584"
+             target="_blank"
+              rel="noopener noreferrer"
+               className="contact-button whatsapp-btn"
+            >
+            <FaWhatsapp /> WhatsApp ↗
+            </a>
+
+
 
             <span className="contact-decoration">✳</span>
           </div>

@@ -1057,3 +1057,149 @@ h1, h2, h3 {
     transition: none;
   }
 }
+
+/* CONTACT BUTTONS DESIGN */
+
+.contact-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-right: 12px;
+  margin-bottom: 12px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+
+/* TOMBOL GITHUB */
+.github-btn {
+  background: #ffffff;
+  color: #181818;
+}
+
+/* TOMBOL WHATSAPP */
+.whatsapp-btn {
+  background: #d9fbe4;
+  color: #181818;
+}
+
+/* HOVER ANIMATION */
+.contact-button:hover {
+  transform: translateY(-6px);
+  box-shadow: 5px 6px 0 #181818;
+}
+
+.github-btn:hover {
+  background: #ffe333;
+}
+
+.whatsapp-btn:hover {
+  background: #b8f5cd;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .contact-button {
+    margin-right: 8px;
+    padding: 14px 20px;
+    font-size: 13px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-button:hover {
+    transform: none;
+  }
+}
+
+/* ANIMASI CONTACT OTOMATIS */
+
+.contact-button {
+  animation: contactFloat 3s ease-in-out infinite;
+}
+
+/* Tombol GitHub bergerak bergantian */
+.github-btn {
+  animation-delay: 0.4s;
+}
+
+/* Tombol WhatsApp bergerak bergantian */
+.whatsapp-btn {
+  animation-delay: 0.8s;
+}
+
+/* Gerakan melayang */
+@keyframes contactFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-9px);
+  }
+}
+
+/* Animasi ketika disentuh mouse */
+.contact-button:hover {
+  animation: none;
+  transform: translateY(-6px) scale(1.05);
+}
+
+/* Aksesibilitas */
+@media (prefers-reduced-motion: reduce) {
+  .contact-button {
+    animation: none;
+  }
+}
+
+/* ANIMASI JUDUL LET'S CREATE */
+
+.contact h2 span {
+  display: inline-block;
+  transform-origin: left center;
+  animation: creativeTitle 3s ease-in-out infinite;
+}
+
+@keyframes creativeTitle {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-8px) rotate(-1deg);
+  }
+}
+
+/* Matikan gerakan jika pengguna memilih
+   mengurangi animasi */
+@media (prefers-reduced-motion: reduce) {
+  .contact h2 span {
+    animation: none;
+  }
+}
+
+/* ANIMASI ICON CONTACT */
+
+.contact-button svg {
+  font-size: 19px;
+  flex-shrink: 0;
+  transition: transform 0.35s ease;
+}
+
+/* Ikon membesar dan berputar */
+.contact-button:hover svg {
+  transform: scale(1.3) rotate(-15deg);
+}
+
+/* Mengurangi gerakan jika diperlukan */
+@media (prefers-reduced-motion: reduce) {
+  .contact-button svg {
+    transition: none;
+  }
+
+  .contact-button:hover svg {
+    transform: none;
+  }
+}
